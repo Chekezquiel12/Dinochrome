@@ -1,0 +1,16 @@
+ @startuml
+class Game
+class Dino
+class Obstacle
+class Cactus
+class Bird
+class Score
+
+Game *-- Dino : composition
+Game o-- Score : aggregation
+Game *-- Obstacle : composition
+
+Obstacle <|-- Cactus
+Obstacle <|-- Bird
+
+@endum
