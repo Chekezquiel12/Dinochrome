@@ -1,4 +1,4 @@
- @startuml
+@startuml
 class Game
 class Dino
 class Obstacle
@@ -13,4 +13,4 @@ Game *-- Obstacle : composition
 Obstacle <|-- Cactus
 Obstacle <|-- Bird
 
-@endum
+@enduml
