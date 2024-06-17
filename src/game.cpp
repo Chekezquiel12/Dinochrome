@@ -1,5 +1,4 @@
-// Alex Eidt
-// Dino Game
+
 
 #define OLC_PGE_APPLICATION
 #include "olcPixelGameEngine.h"
