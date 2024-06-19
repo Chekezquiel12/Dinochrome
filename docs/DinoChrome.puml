@@ -1,4 +1,4 @@
-@startuml
+@startuml DinoChrome
 class Game
 class Dino
 class Obstacle
@@ -10,7 +10,7 @@ Game *-- Dino : composition
 Game o-- Score : aggregation
 Game *-- Obstacle : composition
 
-Obstacle <|-- Cactus
-Obstacle <|-- Bird
+Obstacle <|-- Cactus :inheritance
+Obstacle <|-- Bird :inheritance
 
 @enduml
