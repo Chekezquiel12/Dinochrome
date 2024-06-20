@@ -1,16 +1,37 @@
 @startuml DinoChrome
-class Game
-class Dino
-class Obstacle
-class Cactus
-class Bird
-class Score
+class Game {
+  +startGame()
+  +endGame()
+  +updateScore()
+}
 
-Game *-- Dino : composition
-Game o-- Score : aggregation
-Game *-- Obstacle : composition
+class Dino {
+  +jump()
+  +duck()
+}
 
-Obstacle <|-- Cactus :inheritance
-Obstacle <|-- Bird :inheritance
+class Obstacle {
+  +move()
+}
+
+class Cactus {
+  +grow()
+}
+
+class Bird {
+  +fly()
+}
+
+class Score {
+  +increase()
+  +reset()
+}
+
+Game *-- "1" Dino : composition
+Game o-- "1" Score : aggregation
+Game *-- "1..*" Obstacle : composition
+
+Obstacle <|-- Cactus : inheritance
+Obstacle <|-- Bird : inheritance
 
 @enduml
